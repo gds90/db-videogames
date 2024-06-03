@@ -1,0 +1,53 @@
+1. Videogame - Software House:
+
+Ogni videogame ha una software house da cui è prodotto.
+Una software house produce più videogames.
+Relazione: Uno a molti (FK in videogames).
+
+2. Videogame - Piattaforma:
+
+Ogni videogame può essere disponibile per più piattaforme.
+Ogni piattaforma supporta più videogames.
+Relazione: Molti a molti (tabella pivot con ID del videogame e ID della piattaforma).
+
+3. Videogame - Categoria:
+
+Un videogame può appartenere a più categorie.
+Ogni categoria può essere condivisa da più videogames.
+Relazione: Molti a molti (tabella pivot con ID del videogame e ID della categoria).
+
+4. Videogame - Classificazione PEGI:
+
+Ogni videogame ha una sola classificazione PEGI.
+Una classificazione PEGI può essere condivisa da più videogiochi.
+Relazione: Uno a molti (FK in videogames).
+
+5. Torneo - Videogame:
+
+Ogni torneo è basato su un solo videogame.
+Per ogni videogame è possibile organizzare più tornei.
+Relazione: Uno a molti (FK in tornei).
+
+6. Torneo - Giocatore:
+
+Un torneo può avere più giocatori che partecipano.
+Ogni giocatore può partecipare a più tornei, anche in anni diversi.
+Relazione: Molti a molti (tabella pivot con ID del torneo, ID del giocatore e anno del torneo).
+
+7. Videogame - Recensione:
+
+Un videogame può ricevere più recensioni.
+Una recensione è su un solo videogame.
+Relazione: Uno a molti (FK in recensioni).
+
+8. Giocatore - Recensione:
+
+Un giocatore può scrivere più recensioni.
+Una recensione è fatta da un solo giocatore.
+Relazione: Uno a molti (FK in recensioni).
+
+9. Videogame - Premio:
+
+Un videogame può ricevere più premi durante l'anno.
+Un premio può essere vinto soltanto da un videogame durante lo stesso anno.
+Relazione: Uno a molti (FK in premi, con PK condivisa da ID e anno del premio).
